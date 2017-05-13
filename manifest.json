@@ -8,7 +8,7 @@
     "short_name": "SF1 Desktop",
     "version": "1.0.0",
     "description": "Open Salesforce one app on your desktop and feel you are in mobile or tablet and enjoy the powerfull and smooth sf1 app.",
-    "permissions": ["activeTab", "storage", "webRequest", "webRequestBlocking", "<all_urls>"],
+    "permissions": ["tabs", "activeTab", "storage", "webRequest", "webRequestBlocking", "<all_urls>"],
     "version_name": "1.0.0",
     "homepage_url": "https://github.com/mhadaily/Salesforce1-on-desktop",
     "options_page": "options.html",
