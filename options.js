@@ -1,7 +1,7 @@
 var INPUT_ID = 'saleforceUrl';
 var BUTTON_ID = 'saleforceUrlsave';
 
-// Saves options to chrome.storage.sync.
+// Saves options to chrome.storage.local.
 function message(msg) {
     var status = document.getElementById('status');
     status.textContent = msg;
@@ -16,7 +16,7 @@ function save_options() {
         message('Error: No value specified');
         return;
     }
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         saleforceUrl: saleforceUrl,
     }, function() {
         // Update status to let user know options were saved.
@@ -25,7 +25,7 @@ function save_options() {
 }
 // Restores saleforceUrl using the preferences stored in chrome.storage.
 function restore_options() {
-    chrome.storage.sync.get('saleforceUrl', function(items) {
+    chrome.storage.local.get('saleforceUrl', function(items) {
         document.getElementById(INPUT_ID).value = items.saleforceUrl;
     });
 }
