@@ -1,3 +1,6 @@
+var INPUT_ID = 'saleforceUrl';
+var BUTTON_ID = 'saleforceUrlsave';
+
 // Saves options to chrome.storage.sync.
 function message(msg) {
     var status = document.getElementById('status');
@@ -8,7 +11,7 @@ function message(msg) {
 }
 
 function save_options() {
-    var saleforceUrl = document.getElementById('saleforceUrl').value;
+    var saleforceUrl = document.getElementById(INPUT_ID).value;
     if (!saleforceUrl) {
         message('Error: No value specified');
         return;
@@ -23,8 +26,9 @@ function save_options() {
 // Restores saleforceUrl using the preferences stored in chrome.storage.
 function restore_options() {
     chrome.storage.sync.get('saleforceUrl', function(items) {
-        document.getElementById('saleforceUrl').value = items.saleforceUrl;
+        document.getElementById(INPUT_ID).value = items.saleforceUrl;
     });
 }
+
 document.addEventListener('DOMContentLoaded', restore_options);
-document.getElementById('saleforceUrlsave').addEventListener('click', save_options);
+document.getElementById(BUTTON_ID).addEventListener('click', save_options);
