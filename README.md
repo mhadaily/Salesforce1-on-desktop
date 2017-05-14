@@ -2,6 +2,8 @@
 
 This chrome extension helps you to open your Salesforce one app on your desktop as sf1 is only works on Mobile and Tablet. 
 
+## [Install the extension here](https://chrome.google.com/webstore/detail/salesforce1-desktop/bbnaggniomlpnkibnalahhenhikolffn)
+
 ![Click on Options](1.jpg)
 
 ![Save your app subdomain](2.jpg)
